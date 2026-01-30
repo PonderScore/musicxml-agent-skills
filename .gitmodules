@@ -1,0 +1,7 @@
+[submodule "specs/musicxml"]
+	path = specs/musicxml
+	url = https://github.com/w3c/musicxml.git
+	branch = gh-pages
+[submodule "specs/agent-skills"]
+	path = specs/agent-skills
+	url = https://github.com/agentskills/agentskills.git
