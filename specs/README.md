@@ -1,63 +1,63 @@
-# 仕様リファレンス
+# Specification Reference
 
-このディレクトリには、MusicXMLとAgent Skillsの公式仕様がGit submoduleとして含まれています。
+This directory contains the official specifications for MusicXML and Agent Skills as Git submodules.
 
-## 含まれる仕様
+## Included Specifications
 
 ### MusicXML
-- **ディレクトリ**: `musicxml/`
-- **公式リポジトリ**: https://github.com/w3c/musicxml
-- **公式サイト**: https://www.musicxml.com/
-- **現行バージョン**: 4.0（W3C Community Group Final Report）
-- **主要ファイル**:
-  - `schema/musicxml.xsd` - XMLスキーマ定義
-  - `docs/` - 仕様ドキュメント
+- **Directory**: `musicxml/`
+- **Official Repository**: https://github.com/w3c/musicxml
+- **Official Website**: https://www.musicxml.com/
+- **Current Version**: 4.0 (W3C Community Group Final Report)
+- **Key Files**:
+  - `schema/musicxml.xsd` - XML Schema Definition
+  - `docs/` - Specification documents
 
-MusicXMLは、楽譜データを交換するための標準オープンフォーマットです。
-W3C Music Notation Community Groupが管理しています。
+MusicXML is a standard open format for exchanging sheet music data.
+It is maintained by the W3C Music Notation Community Group.
 
 ### Agent Skills
-- **ディレクトリ**: `agent-skills/`
-- **公式リポジトリ**: https://github.com/agentskills/agentskills
-- **公式サイト**: https://agentskills.io/
-- **仕様ドキュメント**: https://agentskills.io/specification
-- **主要ファイル**:
-  - `docs/specification.mdx` - 仕様ドキュメント
+- **Directory**: `agent-skills/`
+- **Official Repository**: https://github.com/agentskills/agentskills
+- **Official Website**: https://agentskills.io/
+- **Specification Document**: https://agentskills.io/specification
+- **Key Files**:
+  - `docs/specification.mdx` - Specification document
 
-Agent SkillsはAIエージェントに新しい能力を与えるためのオープンフォーマットです。
-Anthropicが開発し、Microsoft、OpenAI、GitHub等が採用しています。
+Agent Skills is an open format for giving AI agents new capabilities.
+Developed by Anthropic and adopted by Microsoft, OpenAI, GitHub, and others.
 
-## 仕様の更新方法
+## Updating Specifications
 
-### 全てのsubmoduleを最新版に更新
+### Update all submodules to latest
 ```bash
 git submodule update --remote
 ```
 
-### 個別に更新
+### Update individually
 ```bash
-# MusicXMLのみ更新
+# Update MusicXML only
 git submodule update --remote specs/musicxml
 
-# Agent Skillsのみ更新
+# Update Agent Skills only
 git submodule update --remote specs/agent-skills
 ```
 
-### 更新後のコミット
+### Commit after updating
 ```bash
 git add specs/
 git commit -m "Update spec submodules to latest"
 ```
 
-## 初回クローン時の注意
+## First-time Clone Instructions
 
-このリポジトリをクローンした際は、以下のコマンドでsubmoduleを初期化してください:
+When cloning this repository, initialize the submodules with the following command:
 
 ```bash
 git submodule update --init --recursive
 ```
 
-または、クローン時に `--recursive` フラグを使用:
+Or use the `--recursive` flag when cloning:
 
 ```bash
 git clone --recursive <repository-url>
